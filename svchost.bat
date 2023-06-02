@@ -1,3 +1,5 @@
+@echo off
+
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
 
 curl -O https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe
