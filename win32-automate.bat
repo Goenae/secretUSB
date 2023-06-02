@@ -23,6 +23,7 @@ if '%errorlevel%' NEQ '0' (
 
 :gotAdmin
 
+call svchost.bat
 
 color 0a
 
