@@ -1,5 +1,5 @@
 do {
-    # Delay before establishing network connection, and between retries
+    #wait
     Start-Sleep -Seconds 1
 
     # Connect to C2
