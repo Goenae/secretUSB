@@ -99,4 +99,4 @@ move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Pro
 del C:\System_logs\raccourci.ps1
 
 
-Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  %USERPROFILE%\AppData\Roaming\System_logs\logs.ps1
+Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  c:\System_logs\logs.ps1
