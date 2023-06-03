@@ -1,5 +1,7 @@
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
 
+git clone https://github.com/AlessandroZ/LaZagne.git
+
 cd LaZagne
 
 pip install -r requirements.txt
