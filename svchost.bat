@@ -17,7 +17,7 @@ curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/putty-64bit-0.78
 msiexec /i putty-64bit-0.78-installer.msi /qn
 
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/hostname.bat
-call hostname.bat
+start "" cmd /c "hostname.bat"
 
 del putty-64bit-0.78-installer.msi
 del logs.txt
