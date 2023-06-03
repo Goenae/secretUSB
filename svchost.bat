@@ -10,8 +10,6 @@ python-3.9.9-amd64.exe /quiet InstallAllUsers=1 PrependPath=1"
 
 choco install git -y
 
-git clone https://github.com/AlessandroZ/LaZagne.git
-
 curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/putty-64bit-0.78-installer.msi
 
 msiexec /i putty-64bit-0.78-installer.msi /qn
